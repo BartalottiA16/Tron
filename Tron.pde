@@ -5,7 +5,7 @@ int compY = 151;
 int compDir = DOWN;
 boolean gameOver = false;
 //int gameState = 0; //0 is start, 1 is play, 2 is gameOver
-PImage endGame;
+//PImage endGame;
 //PImage startImage;
 void setup()
 {
@@ -15,7 +15,7 @@ void setup()
   textAlign(CENTER);
   textSize(44);
   key = 'w';
-  endGame = loadImage("https://i.ytimg.com/vi/iZRG5k5dGp8/maxresdefault.jpg");
+  //endGame = loadImage("https://i.ytimg.com/vi/iZRG5k5dGp8/maxresdefault.jpg");
 }
 void draw()
 {
@@ -24,7 +24,7 @@ void draw()
   {
     //endGame = loadImage("https://i.ytimg.com/vi/iZRG5k5dGp8/maxresdefault.jpg");
     //background?
-    image(endGame, 400, 300);
+    //image(endGame, 400, 300);
   }
   //if (gameState == 0)
 
@@ -56,9 +56,9 @@ void human()
   if (get(x, y) != color(0))
   {
     fill(255, 0, 0);
-    image(endGame, 0, 0, 400, 300);
-    //text("GAME OVER", 200, 150);
-    //text("COMPUTER WINS", 200, 190);
+    //image(endGame, 0, 0, 400, 300);
+    text("GAME OVER", 200, 150);
+    text("COMPUTER WINS", 200, 190);
     gameOver = true;
   }
   stroke(255);
@@ -107,11 +107,10 @@ void computer()
   if (get(compX, compY) != color(0))
   {
     fill(255, 0, 0);
-    
-    //text("GAME OVER", 200, 150);
-   // text("YOU WIN!", 200, 190);
+    text("GAME OVER", 200, 150);
+    text("YOU WIN!", 200, 190);
     gameOver = true;
-    image(endGame, 0, 0, 400, 300);
+    //image(endGame, 0, 0, 400, 300);
   }
   stroke(0, 255, 0);
   point(compX, compY);
